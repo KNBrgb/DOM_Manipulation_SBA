@@ -32,3 +32,6 @@ body {
     background-color: var(--answer-wrong-bg);
     margin: 15px;
   }
+  #endgame{
+    font-size: 100px
+  }
