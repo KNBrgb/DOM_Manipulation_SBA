@@ -9,4 +9,10 @@
 //}};
 const gardenColor = document.querySelector(".garden");
 gardenColor.style.backgroundColor = 'var(--main-bg)';
+;
+const dEl = document.innerHTML = document.innerHTML = "<div class='solution'></div>";
+// dEl.classList.remove('solution');
+// dEl.classList.add('answer');
+dEl.textContent = 'lol';
+// console.log(dEl);
 
