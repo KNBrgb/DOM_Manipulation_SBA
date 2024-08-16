@@ -1,0 +1,30 @@
+:root{
+    --main-bg: rgb(0, 126, 86);
+    --title-clr:rgba(255, 230, 0, 0.833);
+    --answer-wrong:rgba(69, 47, 0, 0.83) 2px solid;
+    --answer-wrong-bg:  rgb(74, 0, 0);
+}
+body {
+    margin: 0;
+    background-color: 'var(--main-bg)';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  h1 {
+    font-family:'Lucida Sans';
+    color: var(--title-clr);
+  }
+  .holeContainer {
+    display: flex;
+  }
+  .hole {
+    width: 50px;
+    height: 25px;
+    border-radius: 75%;
+    border: var(--border-wrong);
+    background-color: var(--answer-wrong-bg);
+    margin: 10px;
+  }
