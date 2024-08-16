@@ -9,3 +9,4 @@
 //}};
 const gardenColor = document.querySelector(".garden");
 gardenColor.style.backgroundColor = 'var(--main-bg)';
+

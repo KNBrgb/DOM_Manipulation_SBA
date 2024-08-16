@@ -2,11 +2,15 @@
     --main-bg: rgb(0, 126, 86);
     --title-clr:rgba(255, 230, 0, 0.833);
     --answer-wrong:rgba(69, 47, 0, 0.83) 2px solid;
-    --answer-wrong-bg:  rgb(74, 0, 0);
+    --answer-wrong-bg:rgb(74, 0, 0);
+    --winner-bg: rgb(80, 186, 0);
+    --loser-bg:rgb(63, 98, 46);
 }
 body {
     margin: 0;
-    background-color: 'var(--main-bg)';
+    background-color: var(--main-bg);
+    background-color: var(--winner-bg);
+    background-color: var(--loser-bg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +18,7 @@ body {
     min-height: 100vh;
   }
   h1 {
-    font-family:'Lucida Sans';
+    font-family:monospace;
     color: var(--title-clr);
   }
   .holeContainer {
@@ -22,9 +26,9 @@ body {
   }
   .hole {
     width: 50px;
-    height: 25px;
+    height: 35px;
     border-radius: 75%;
     border: var(--border-wrong);
     background-color: var(--answer-wrong-bg);
-    margin: 10px;
+    margin: 15px;
   }
