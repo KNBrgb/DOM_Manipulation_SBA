@@ -40,7 +40,7 @@ function startGame() {
 
     if (i === 2) {
       answer.innerHTML = `Sorry, the correct hole was number ${currentNumber}! He got away to dig another day. `;
-      answer.style = "red";
+      answer.style.color = "red";
       window.document.body.style.backgroundColor = 'var(--loser-bg)';
       document.getElementById("revealButton").addEventListener("click", function () {
           alert(`The correct number was ${currentNumber}`);
