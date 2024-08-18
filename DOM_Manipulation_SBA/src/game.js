@@ -15,6 +15,7 @@
 // dEl.classList.add('answer');
 // dEl.textContent = 'lol';
 // console.log(dEl);
+
 function startGame() {
   // let currentNumber = 1
   let currentNumber = Math.floor(Math.random() * 7) + 1;
@@ -27,23 +28,34 @@ function startGame() {
     // console.log(currentNumber);
     // Creating random number gen.
     if (guess == currentNumber) {
-      alert("");
       answer.innerHTML = "Holy moly, you got 'em!";
-    } else guess != currentNumber;
+      window.document,style.backgroundColor = 'var(--winner-bg)'
+      break;
+      //   alert('Holy moly, you got 'em!')
+    } else;
     {
       // prompt("So close, try again! Pick a number between 1 and 6:")
       answer.innerHTML = "He got away to dig another day...";
     }
-    // else if (guess != currentNumber)
-    //     console.log(guess)
 
-    // const answerEl = answerEl.querySelector("div.answer")
-    // console.log(answerEl)
+    if (i === 2) {
+      answer.innerHTML = `Sorry, the correct hole was number ${currentNumber}! He got away to dig another day. `;
+      answer.style = "red";
+      window.document.body.style.backgroundColor = 'var(--loser-bg)';
+      document.getElementById("revealButton").addEventListener("click", function () {
+          alert(`The correct number was ${currentNumber}`);
+        });
+      // else if (guess != currentNumber)
+      //     console.log(guess)
+
+      // const answerEl = answerEl.querySelector("div.answer")
+      // console.log(answerEl)
+    }
   }
 }
 // startGame()
 // console.log(window.prompt);
-window.innerHeight = "100%"
+window.innerHeight = "100%";
 window.document.getElementById("whack").addEventListener("click", startGame);
 // document.querySelector.style.backgroundColor = "blue"
 const whackButton = document.getElementById("whack");
