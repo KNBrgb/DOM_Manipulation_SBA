@@ -32,7 +32,7 @@ function startGame() {
       window.document,style.backgroundColor = 'var(--winner-bg)'
       break;
       //   alert('Holy moly, you got 'em!')
-    } else;
+    } else
     {
       // prompt("So close, try again! Pick a number between 1 and 6:")
       answer.innerHTML = "He got away to dig another day...";
