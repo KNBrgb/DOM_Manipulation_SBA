@@ -27,8 +27,8 @@ function startGame() {
     // console.log(currentNumber);
     // Creating random number gen.
     if (guess == currentNumber) {
-      alert("Holy moly, you got 'em!");
-      answer.innerHTML = "C";
+      alert("");
+      answer.innerHTML = "Holy moly, you got 'em!";
     } else guess != currentNumber;
     {
       // prompt("So close, try again! Pick a number between 1 and 6:")
@@ -43,6 +43,7 @@ function startGame() {
 }
 // startGame()
 // console.log(window.prompt);
+window.innerHeight = "100%"
 window.document.getElementById("whack").addEventListener("click", startGame);
 // document.querySelector.style.backgroundColor = "blue"
 const whackButton = document.getElementById("whack");
