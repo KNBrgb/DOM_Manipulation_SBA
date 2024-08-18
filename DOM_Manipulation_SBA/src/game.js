@@ -17,10 +17,10 @@
 // console.log(dEl);
 function startGame () {
     // let currentNumber = 1
-    let currentNumber = Math.floor(Math.random()*6) + 1;
+    let currentNumber = Math.floor(Math.random()*7) + 1;
 
     for (let i=0; i < 3; i++ ){
-    let guess = prompt("Pick a number between 1 and 6:")
+    let guess = prompt("Pick a number between 1 and 7:")
 
     // const answerEl = answerEl.querySelector("div.answer")
     // console.log(answerEl)
