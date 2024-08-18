@@ -1,37 +1,42 @@
-:root{
-    --main-bg: rgb(0, 126, 86);
-    --title-clr:rgba(255, 230, 0, 0.833);
-    --answer-wrong:rgba(69, 47, 0, 0.83) 2px solid;
-    --answer-wrong-bg:rgb(74, 0, 0);
-    --winner-bg: rgb(80, 186, 0);
-    --loser-bg:rgb(63, 98, 46);
+:root {
+  --main-bg: rgb(0, 126, 86);
+  --title-clr: rgba(255, 230, 0, 0.833);
+  --answer-wrong: rgba(69, 47, 0, 0.83) 2px solid;
+  --answer-wrong-bg: rgb(74, 0, 0);
+  --winner-bg: rgb(80, 186, 0);
+  --loser-bg: rgb(63, 98, 46);
 }
 body {
-    margin: 0;
-    background-color: var(--main-bg);
-    background-color: var(--winner-bg);
-    background-color: var(--loser-bg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  h1 {
-    font-family:monospace;
-    color: var(--title-clr);
-  }
-  .holeContainer {
-    display: flex;
-  }
-  .hole {
-    width: 50px;
-    height: 35px;
-    border-radius: 75%;
-    border: var(--border-wrong);
-    background-color: var(--answer-wrong-bg);
-    margin: 15px;
-  }
-  #endgame{
-    font-size: 100px
-  }
+  margin: 0;
+  background-color: var(--main-bg);
+  background-color: var(--winner-bg);
+  background-color: var(--loser-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+h1 {
+  font-family: monospace;
+  color: var(--title-clr);
+}
+.holeContainer {
+  display: flex;
+}
+.hole {
+  width: 50px;
+  height: 35px;
+  border-radius: 75%;
+  border: var(--border-wrong);
+  background-color: var(--answer-wrong-bg);
+  margin: 15px;
+}
+#endgame {
+  font-size: 100px;
+}
+
+#where{
+  color: var(--title-clr);
+  font-family: 'Lucida Sans';
+}
