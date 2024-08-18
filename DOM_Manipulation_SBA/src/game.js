@@ -29,7 +29,7 @@ function startGame() {
     // Creating random number gen.
     if (guess == currentNumber) {
       answer.innerHTML = "Holy moly, you got 'em!";
-      window.document,style.backgroundColor = 'var(--winner-bg)'
+      window.document.style.backgroundColor = 'var(--winner-bg)';
       break;
       //   alert('Holy moly, you got 'em!')
     } else
@@ -39,11 +39,11 @@ function startGame() {
     }
 
     if (i === 2) {
-      answer.innerHTML = `Sorry, the correct hole was number ${currentNumber}! He got away to dig another day. `;
+    //   answer.innerHTML = `Sorry, the correct hole was number ${currentNumber}! He got away to dig another day. `;
       answer.style.color = "red";
       document.body.style.backgroundColor = 'var(--loser-bg)';
-      document.getElementById("revealButton").addEventListener("click", function () {
-          alert(`The correct number was ${currentNumber}`);
+      document.getElementById("whack").addEventListener("click", function () {
+          answer.innerHTML = `The correct number was ${currentNumber}`;
         });
       // else if (guess != currentNumber)
       //     console.log(guess)
@@ -56,7 +56,7 @@ function startGame() {
 // startGame()
 // console.log(window.prompt);
 window.innerHeight = "100%";
-window.document.getElementById("whack").addEventListener("click", startGame);
+document.getElementById("whack").addEventListener("click", startGame);
 // document.querySelector.style.backgroundColor = "blue"
 const whackButton = document.getElementById("whack");
 whackButton.style.backgroundColor = "blue";
