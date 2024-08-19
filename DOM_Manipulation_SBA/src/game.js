@@ -41,7 +41,7 @@ function startGame() {
           alert(`Sorry, the correct hole was number ${currentNumber}. He got away to dig another day...`);
           document.body.style.backgroundColor = "var(--loser-bg)";
           answerEl.style.color = "red";
-
+// ADD A BREAK TO STOP THE LOOP, THEN AND FUNCTION TO BUTTON TO RESTART (button = startGame)
         }
       }
     }
