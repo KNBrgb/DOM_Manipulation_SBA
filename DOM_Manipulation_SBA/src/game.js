@@ -25,22 +25,29 @@ function startGame() {
 
   function nextTry() {
     if (i < tries) {
-      
+      // var win = document.getElementById('win').setAttribute('id','box');
 
       let guess = prompt("Pick a number between 1 and 7:");
 
       if (guess == currentNumber.toString()) {
         alert("Holy moly, you got 'em!");
         document.body.style.backgroundColor = "var(--winner-bg)";
+        document.getElementById("#win").setAttribute.style.display = "block";
+        return;
       } else {
         i++;
         if (i < tries) {
           // answerEl.innerHTML = `Try again! You have ${tries - i - 1} tries left.`
           nextTry();
         } else {
+        //   document.getElementById(`hole${mole}`).innerHTML =
+        // "<img id='shockedMole' src='./img/shockedmole.png' alt='mole'>";
           alert(`Sorry, the correct hole was number ${currentNumber}. He got away to dig another day...`);
           document.body.style.backgroundColor = "var(--loser-bg)";
           answerEl.style.color = "red";
+          return;
+         
+
 // ADD A BREAK TO STOP THE LOOP, THEN AND FUNCTION TO BUTTON TO RESTART (button = startGame)
         }
       }

@@ -5,6 +5,7 @@
   --answer-wrong-bg: rgb(74, 0, 0);
   --winner-bg: rgb(80, 186, 0);
   --loser-bg: rgb(63, 98, 46);
+  --end: display, block
 }
 body {
   margin: 0;
@@ -39,4 +40,7 @@ h1 {
 #where{
   color: var(--title-clr);
   font-family: 'Lucida Sans';
+}
+.endgame{
+  display: block;
 }
