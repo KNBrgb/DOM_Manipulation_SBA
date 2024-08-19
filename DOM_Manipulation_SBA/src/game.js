@@ -1,3 +1,4 @@
+const answerEl = document.querySelector("#answer");
 // function startGame() {
 //     let currentNum = Math.floor(Math.random()*7) + 1;
 
@@ -19,44 +20,36 @@
 function startGame() {
   // let currentNumber = 1
   let currentNumber = Math.floor(Math.random() * 7) + 1;
+  let tries = 3;
+  let i = 0;
 
-  for (let i = 0; i < 3; i++) {
-    let guess = prompt("Pick a number between 1 and 7:");
+  function nextTry() {
+    if (i < tries) {
+      
 
-    // const answerEl = answerEl.querySelector("div.answer")
-    // console.log(answerEl)
-    // console.log(currentNumber);
-    // Creating random number gen.
-    if (guess == currentNumber) {
-      answer.innerHTML = "Holy moly, you got 'em!";
-      window.document.style.backgroundColor = 'var(--winner-bg)';
-      break;
-      //   alert('Holy moly, you got 'em!')
-    } else
-    {
-      // prompt("So close, try again! Pick a number between 1 and 6:")
-      answer.innerHTML = "He got away to dig another day...";
-    }
+      let guess = prompt("Pick a number between 1 and 7:");
 
-    if (i === 2) {
-    //   answer.innerHTML = `Sorry, the correct hole was number ${currentNumber}! He got away to dig another day. `;
-      answer.style.color = "red";
-      document.body.style.backgroundColor = 'var(--loser-bg)';
-      document.getElementById("whack").addEventListener("click", function () {
-          answer.innerHTML = `The correct number was ${currentNumber}`;
-        });
-      // else if (guess != currentNumber)
-      //     console.log(guess)
+      if (guess == currentNumber.toString()) {
+        alert("Holy moly, you got 'em!");
+        document.body.style.backgroundColor = "var(--winner-bg)";
+      } else {
+        i++;
+        if (i < tries) {
+          // answerEl.innerHTML = `Try again! You have ${tries - i - 1} tries left.`
+          nextTry();
+        } else {
+          alert(`Sorry, the correct hole was number ${currentNumber}. He got away to dig another day...`);
+          document.body.style.backgroundColor = "var(--loser-bg)";
+          answerEl.style.color = "red";
 
-      // const answerEl = answerEl.querySelector("div.answer")
-      // console.log(answerEl)
+        }
+      }
     }
   }
+  nextTry();
 }
-// startGame()
-// console.log(window.prompt);
-window.innerHeight = "100%";
+//}
+window.innerHeight = "10%";
 document.getElementById("whack").addEventListener("click", startGame);
-// document.querySelector.style.backgroundColor = "blue"
 const whackButton = document.getElementById("whack");
-whackButton.style.backgroundColor = "blue";
+whackButton.style.backgroundColor = "brown";

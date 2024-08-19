@@ -13,39 +13,30 @@
 
     <main>
       <div class="holeContainer">
-        <div id="Hole1" class="hole"></div>
-        <div id="Hole2" class="hole"></div>
-        <div id="Hole3" class="hole"></div>
-        <div id="Hole4" class="hole"></div>
-        <div id="Hole5" class="hole"></div>
-        <div id="Hole6" class="hole"></div>
+        <div id="Hole1" class="hole">1</div>
+        <div id="Hole2" class="hole">2</div>
+        <div id="Hole3" class="hole">3</div>
+        <div id="Hole4" class="hole">4</div>
+        <div id="Hole5" class="hole">5</div>
+        <div id="Hole6" class="hole">6</div>
+        <div id="Hole7" class="hole">7</div>
       </div>
     </main>
     
-    <!-- <div id="endgame">
-      <div class="solution" id="win">
+    <div id="endgame" ">
+      <div class="solution" id="win" style="display: none;">
         <p>&#128516;</p>
       </div>
-      <div class="solution" id="loss">
+      <div class="solution" id="loss" style="display: none;">
         <div class="solution">
-          &#128560; -->
-          <!-- ^ REMOVE INLINE STYLING, APPLY STYLING TO "WIN" ALSO ^ -->
-          <!-- <body id="hidden" style="display:none;">
-  <p>Some page content.</p>
-  <script type="text/javascript">
-    var answer = prompt("What color is the White House?");
-    if (answer.toLowerCase() == "white") {
-      hidden.style.display = "block";
-    }
-  </script>
-</body> -->
-          <!-- THIS WILL BE USED TO HIDE EMOJIS UNTIL THE RIGHT OR WRONG ANSWER IS GIVEN  -->
-
-          <!-- <p></p>
+          &#128560;
+  
+          <p></p>
         </div>
       </div>
-    </div> -->
+    </div> 
     <div id="answer"></div>
+    <form id="answerBox" style="border-bottom: 1px solid">
 
     <!--win: // loss: "You got'em! " -->
     <button id="whack">Start</button>
@@ -53,4 +44,5 @@
     <!-- text will change -> start / start over -->
     <script src="DOM_Manipulation_SBA/src/game.js"></script>
   </body>
+  </html>
 </html>
