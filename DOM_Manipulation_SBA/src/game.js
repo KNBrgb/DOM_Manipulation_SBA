@@ -35,22 +35,22 @@ function nextTry() {
     document.body.style.backgroundColor = "var(--winner-bg)";
     winEl.style.display = "block";
     answerEl.innerHTML = "Holy moly, you got 'em!";
-    resetButton.style.display = "block"; 
+    resetButton.style.display = "block";
   } else {
     tries--;
     if (tries > 0) {
       answerEl.innerHTML = `Try again! You have ${tries} tries left.`;
-      guessInput.style.display = 'block';
-
+      guessInput.style.display = "block";
+      guessInput.value = "";
+      guessInput.focus();
     } else {
       document.body.style.backgroundColor = "var(--loser-bg)";
       answerEl.style.color = "red";
       answerEl.innerHTML = `Sorry, the correct hole was number ${currentNumber}. He got away to dig another day...`;
       resetButton.style.display = "block";
       lossEl.style.display = "block";
-      guessInput.style.display = 'none';
+      guessInput.style.display = "none";
       // guessForm.style.display = 'none';
-      
 
       // ADD A BREAK TO STOP THE LOOP, THEN AND FUNCTION TO BUTTON TO RESTART (button = startGame)
     }
@@ -72,9 +72,8 @@ function resetGame() {
   startGame();
 }
 
-
-guessForm.addEventListener('submit', function(event) {
-  // event.preventDefault();
+guessForm.addEventListener("submit", function (event) {
+  event.preventDefault();
   nextTry();
 });
 
