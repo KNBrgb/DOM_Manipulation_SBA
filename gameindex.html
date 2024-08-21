@@ -22,7 +22,10 @@
         <div id="Hole7" class="hole">7</div>
       </div>
     </main>
-    
+    <form id="guessForm">
+      <input id="guessInput" required placeholder="Guess">
+      <button type="" id="whack">Whack</button>
+    </form>
     <div id="endgame" >
       <div class="solution" id="win" style="display: none;">
         <p>&#128516;</p>
@@ -35,11 +38,11 @@
       </div>
     </div> 
     <div id="answer"></div>
-    <form id="answerBox" style="border-bottom: 1px solid">
+    <!-- <form id="answerBox" style="border-bottom: 1px solid"> -->
 
-    <!--win: // loss: "You got'em! " -->
-    <button id="whack">Start</button>
-    <!-- <button id="revealAnswer">Reveal Answer</button> -->
+    <!-- win: // loss: "You got'em! " -->
+    <!-- <button id="whack">Start</button> -->
+    <button id="resetButton">Reset</button>
     <!-- text will change -> start / start over -->
     <script src="DOM_Manipulation_SBA/src/game.js"></script>
   </body>
