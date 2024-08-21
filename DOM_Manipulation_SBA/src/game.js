@@ -36,6 +36,8 @@ function nextTry() {
     winEl.style.display = "block";
     answerEl.innerHTML = "Holy moly, you got 'em!";
     resetButton.style.display = "block";
+    guessInput.style.display = 'none';
+    whackButton.style.display = 'none';
   } else {
     tries--;
     if (tries > 0) {
@@ -50,6 +52,8 @@ function nextTry() {
       resetButton.style.display = "block";
       lossEl.style.display = "block";
       guessInput.style.display = "none";
+      whackButton.style.display = 'none';
+
       // guessForm.style.display = 'none';
 
       // ADD A BREAK TO STOP THE LOOP, THEN AND FUNCTION TO BUTTON TO RESTART (button = startGame)
@@ -60,7 +64,7 @@ function nextTry() {
   //   "<img id='shockedMole' src='./img/shockedmole.png' alt='mole'>";
   // }
   //}
-}
+};
 // return;
 
 function resetGame() {
@@ -69,8 +73,9 @@ function resetGame() {
   answerEl.innerHTML = "";
   answerEl.style.color = "";
   document.body.style.backgroundColor = "";
+  // resetButton.focus();
   startGame();
-}
+};
 
 guessForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -79,20 +84,36 @@ guessForm.addEventListener("submit", function (event) {
 
 startGame();
 
-// resetButton.style.display = "none";
 
-// function numberGuess() {
-//   let guessInput = document.getElementById("guessInput");
-//   let tryGuess = guessInput.value;
-//   if (/^[1-7]$/.test(tryGuess)) {
-//     return true;
-//   } else {
-//     nextTry();
-//   }
-// }
+// REQUIREMENTS
+// Cache at least one element using selectElementById.
 
-// whackButton.style.backgroundColor = "blue";
-//}
-// window.innerHeight = "10%";
-// document.getElementById("whack").addEventListener("click", startGame);
-// const whackButton = document.getElementById("whack");
+// Cache at least one element using querySelector or querySelectorAll.
+
+// Use the parent-child-sibling relationship to navigate between elements at least once (firstChild, lastChild, parentNode, 
+// nextElementSibling, etc.).
+
+// Iterate over a collection of elements to accomplish some task.
+
+// Create at least one element using createElement.
+
+// Use appendChild and/or prepend to add new elements to the DOM.
+
+// Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content. 
+
+// Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
+
+// Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
+
+// Modify at least one attribute of an element in response to user interaction.
+
+// Register at least two different event listeners and create the associated event handler functions.
+
+// Use at least two Browser Object Model (BOM) properties or methods.
+
+// Include at least one form and/or input with HTML attribute validation.
+
+// Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.)
+
+// Ensure that the program runs without errors (comment out things that do not work, and explain your blockers - you can still receive partial credit).
+
