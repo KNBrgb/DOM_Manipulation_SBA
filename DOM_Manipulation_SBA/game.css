@@ -44,3 +44,6 @@ h1 {
 .endgame{
   display: block;
 }
+.solution{
+  border: 1px black;
+}

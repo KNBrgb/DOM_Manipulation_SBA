@@ -23,12 +23,14 @@
       </div>
     </main>
     <form id="guessForm">
-      <input id="guessInput" required placeholder="Guess">
-      <button type="" id="whack">Whack</button>
-    </form>
+      <input type="text" id="guessInput" required placeholder="Guess">
+       <button type="" id="whack">Whack</button>
+       <button id="resetButton">Reset</button>
+ </form>      
+
     <div id="endgame" >
       <div class="solution" id="win" style="display: none;">
-        <p>&#128516;</p>
+        <img id='shockedMole' src='./img/shockedmole.png' alt='shocked mole'>
       </div>
       <div class="solution" id="loss" style="display: none;">
         <div class="solution">
@@ -42,9 +44,8 @@
 
     <!-- win: // loss: "You got'em! " -->
     <!-- <button id="whack">Start</button> -->
-    <button id="resetButton">Reset</button>
     <!-- text will change -> start / start over -->
     <script src="DOM_Manipulation_SBA/src/game.js"></script>
   </body>
   </html>
-</html>
+
