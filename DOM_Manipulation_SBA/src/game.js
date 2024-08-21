@@ -77,6 +77,11 @@ function resetGame() {
   startGame();
 };
 
+document.getElementById('resetButton').addEventListener('click', function(event) {
+  event.preventDefault();
+  whackButton.style.display = 'block';
+  resetGame();
+});
 guessForm.addEventListener("submit", function (event) {
   event.preventDefault();
   nextTry();
