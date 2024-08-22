@@ -5,6 +5,8 @@ const whackButton = document.getElementById("whack");
 const resetButton = document.getElementById("resetButton");
 const guessForm = document.getElementById("guessForm");
 const guessInput = document.getElementById("guessInput");
+const holes = document.querySelectorAll('.hole');
+holes.forEach(hole => hole.innerHTML = '');
 
 let currentNumber;
 let tries;
@@ -77,6 +79,8 @@ function resetGame() {
   startGame();
 };
 
+
+
 document.getElementById('resetButton').addEventListener('click', function(event) {
   event.preventDefault();
   whackButton.style.display = 'block';
@@ -88,6 +92,7 @@ guessForm.addEventListener("submit", function (event) {
 });
 
 startGame();
+
 
 
 // REQUIREMENTS
