@@ -7,13 +7,17 @@ const guessForm = document.getElementById("guessForm");
 const guessInput = document.getElementById("guessInput");
 const holes = document.querySelectorAll('.hole');
 holes.forEach(hole => hole.innerHTML = '');
+const winMsg = document.createElement('h1');
+const heading = document.createElement('h1');
+heading.textContent = 'Whack-a-Mole';
+document.body.prepend(heading);
 
 let currentNumber;
 let tries;
 
 function startGame() {
   currentNumber = (Math.floor(Math.random() * 7) + 1).toString();
-  tries = 3;
+  tries = 4;
   resetButton.style.display = "none";
   guessInput.value = "";
   answerEl.innerHTML = "";
@@ -35,8 +39,8 @@ function nextTry() {
 
   if (tryGuess == currentNumber) {
     document.body.style.backgroundColor = "var(--winner-bg)";
-    winEl.style.display = "block";
-    answerEl.innerHTML = "Holy moly, you got 'em!";
+    winMsg.style.display = "block";
+    winMsg.textContent = "Holy moly, you got 'em!";
     resetButton.style.display = "block";
     guessInput.style.display = 'none';
     whackButton.style.display = 'none';
