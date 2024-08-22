@@ -7,10 +7,10 @@ const guessForm = document.getElementById("guessForm");
 const guessInput = document.getElementById("guessInput");
 const holes = document.querySelectorAll('.hole');
 holes.forEach(hole => hole.innerHTML = '');
-const winMsg = document.createElement('h1');
 const heading = document.createElement('h1');
 heading.textContent = 'Whack-a-Mole';
 document.body.prepend(heading);
+// const winMsg = document.createElement('p');
 
 let currentNumber;
 let tries;
@@ -39,18 +39,28 @@ function nextTry() {
 
   if (tryGuess == currentNumber) {
     document.body.style.backgroundColor = "var(--winner-bg)";
-    winMsg.style.display = "block";
+    winEl.style.display = "block";
+    const winMsg = document.createElement('p');
     winMsg.textContent = "Holy moly, you got 'em!";
+    winEl.appendChild(winMsg);
+    answerEl.style.display = 'none';
     resetButton.style.display = "block";
     guessInput.style.display = 'none';
     whackButton.style.display = 'none';
+    winMsg.style.fontSize = '25px';
+    winMsg.style.fontWeight = 'bold';
+    resetButton.focus();
+    return;
   } else {
     tries--;
     if (tries > 0) {
+      function attempt() {
       answerEl.innerHTML = `Try again! You have ${tries} tries left.`;
       guessInput.style.display = "block";
       guessInput.value = "";
       guessInput.focus();
+      
+    } attempt();
     } else {
       document.body.style.backgroundColor = "var(--loser-bg)";
       answerEl.style.color = "red";
@@ -59,7 +69,7 @@ function nextTry() {
       lossEl.style.display = "block";
       guessInput.style.display = "none";
       whackButton.style.display = 'none';
-
+      resetButton.focus();
       // guessForm.style.display = 'none';
 
       // ADD A BREAK TO STOP THE LOOP, THEN AND FUNCTION TO BUTTON TO RESTART (button = startGame)
