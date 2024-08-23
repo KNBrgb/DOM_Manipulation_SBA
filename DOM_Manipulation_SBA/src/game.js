@@ -76,7 +76,6 @@ function resetGame() {
   answerEl.innerHTML = "";
   answerEl.style.color = "";
   document.body.style.backgroundColor = "";
-  // resetButton.focus();
   startGame();
 }
 
